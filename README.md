@@ -122,3 +122,48 @@ ___
 Для сброса можно использовать ```git reset``` вместе с параметром --hard и HEAD или хэш коммита, к которому надо вернуться.
 Просмотр логов - ```git log```.
 Если надо сохранить историю, то можно использовать ```git revert``` вместе с HEAD.
+Для отката незакоммиченных изменений - ```git restore```
+
+___
+# Палиндром
+```C++
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+bool isPalindrome(const string& str) {
+    string cleanedStr;
+
+    for (char ch : str) {
+        if (isalnum(ch)) {  // Буква или цифра
+            cleanedStr += tolower(ch);
+        }
+    }
+
+    // Сравниваем  строку с её перевернутой версией
+    string reversedStr = cleanedStr;
+    reverse(reversedStr.begin(), reversedStr.end());
+
+    return cleanedStr == reversedStr;
+}
+
+int main() {
+    string input;
+    cout << "Введите строку: ";
+    getline(cin, input);
+
+    if (isPalindrome(input)) {
+        cout << "Это палиндром." << endl;
+    } else {
+        cout << "Это не палиндром." << endl;
+    }
+
+    return 0;
+}
+```
+___
+
+# Опыт в IT
+В основном опыт у меня от практики от Вуза, но буст к знаниям дали курсы по программированию и различные ресурсы в интернете. 9 месяцев работал в Яндексе в качестве тестировщика, там понял как работать с программой charles. 
