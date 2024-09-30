@@ -109,8 +109,8 @@ int main() {
     Dog dog;
     Cat cat;
 
-    makeSound(dog);  // Полиморфизм: вызов метода Dog::sound()
-    makeSound(cat);  // Полиморфизм: вызов метода Cat::sound()
+    makeSound(dog);
+    makeSound(cat);  
 
     return 0;
 }
